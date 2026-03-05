@@ -28,7 +28,8 @@
     "IsSecureCmd",
     "NUM_CHAT_WINDOWS",
     "ChatEdit_GetActiveWindow",
-    "PlayerUtil"
+    "PlayerUtil",
+    "LibStub"
   ],
   "wowAPI.luals.frameXML": true,
   "wowAPI.luals.configurationScope": "User"

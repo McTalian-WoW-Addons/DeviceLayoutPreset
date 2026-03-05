@@ -5,39 +5,23 @@ on:
   schedule:
     - cron: 0 12 * * *
 
-permissions:
-  contents: write
-  pull-requests: write
+permissions: {}
 
 jobs:
-  run:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Clone project
-        uses: actions/checkout@v4
+  toc-update:
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: McTalian-WoW-Addons/wow-build-tools/.github/workflows/toc-updater.yml@v1-beta
+    with:
+      addon-name: DeviceLayoutPreset
+      pr-body: |
+        ## Requirements
 
-      - name: Update TOC Interface version
-        uses: Mctalian/wow-toc-updater@v1
-        with:
-          flavor: retail
-          ptr: true
-          beta: true
+        - [ ] Download test package in the comments below
+        - [ ] Test for all applicable game clients
+          - [ ] Retail (Live? PTR? Beta?)
 
-      - name: Create pull request
-        uses: peter-evans/create-pull-request@v8
-        with:
-          token: ${{ secrets.GH_PAT }}
-          title: "build(toc): bump toc versions, please submit any bugs!"
-          body: |
-            ## Requirements
-
-            - [ ] Download test package in the comments below
-            - [ ] Test for all applicable game clients
-              - [ ] Retail
-              - [ ] Retail PTR
-
-            ----------------------------------------------------
-            _This PR was automatically created to update the supported interface versions in DeviceLayoutPreset.toc._
-          commit-message: "build(toc): bump toc versions, please submit any bugs!"
-          branch: interface-version
-          delete-branch: true
+        ----------------------------------------------------
+        _This PR was automatically created to update the supported interface versions in DeviceLayoutPreset.toc._
+    secrets: inherit
