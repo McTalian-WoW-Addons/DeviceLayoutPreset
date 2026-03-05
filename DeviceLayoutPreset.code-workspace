@@ -1,0 +1,87 @@
+{
+	"folders": [
+		{
+			"name": "DeviceLayoutPreset",
+			"path": ".",
+			"Lua.diagnostics.globals": [
+				"InterfaceOptions_AddCategory",
+				"UIDropDownMenu_SetWidth",
+				"UIDropDownMenu_Initialize",
+				"UIDropDownMenu_SetText",
+				"EditModeManagerFrame",
+				"UIDropDownMenu_AddButton",
+				"UIDropDownMenu_CreateInfo",
+				"SlashCmdList",
+				"InterfaceOptionsFrame_OpenToCategory",
+				"ReloadUI",
+				"DEFAULT_CHAT_FRAME",
+				"SELECTED_CHAT_FRAME",
+				"NORMAL_FONT_COLOR",
+				"ACCEPT",
+				"CANCEL",
+				"Settings",
+				"hash_SlashCmdList",
+				"NORMAL_FONT_COLOR_CODE",
+				"FONT_COLOR_CODE_CLOSE",
+				"CLOSE",
+				"SetDesaturation",
+				"ColorPickerFrame",
+				"OpacitySliderFrame",
+				"OKAY",
+				"NOT_BOUND",
+				"IsSecureCmd",
+				"NUM_CHAT_WINDOWS",
+				"ChatEdit_GetActiveWindow",
+				"PlayerUtil"
+			],
+			"wowAPI.luals.frameXML": true,
+			"wowAPI.luals.configurationScope": "User",
+			"Lua.diagnostics.enable": true,
+			"Lua.workspace.userThirdParty": [],
+			"Lua.workspace.checkThirdParty": false,
+			"Lua.workspace.ignoreSubmodules": true,
+			"Lua.workspace.useGitIgnore": true,
+			"Lua.type.weakUnionCheck": true,
+			"wowAPI.debugMode": false
+		},
+		{
+			"name": "wow-ui-source",
+			"path": "../wow-ui-source",
+			"Lua.diagnostics.enable": false,
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.git": true
+		},
+		"search.exclude": {
+			"**/node_modules": true,
+			"**/.release": true
+		},
+		"wowAPI.debugMode": true,
+		"wowAPI.luals.configurationScope": "User",
+		"Lua.diagnostics.enable": false,
+		"Lua.diagnostics.disable": [
+			"assign-type-mismatch",
+			"ambiguity-1",
+			"cast-local-type",
+			"deprecated",
+			"duplicate-set-field",
+			"inject-field",
+			"lowercase-global",
+			"missing-fields",
+			"missing-parameter",
+			"missing-return",
+			"need-check-nil",
+			"param-type-mismatch",
+			"redundant-parameter",
+			"unbalanced-assignments",
+			"undefined-field",
+			"undefined-global"
+		],
+		"wowAPI.luals.frameXML": false,
+		"chat.tools.terminal.autoApprove": {
+			"make": true
+		},
+	}
+}
