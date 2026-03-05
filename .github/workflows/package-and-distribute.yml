@@ -8,24 +8,11 @@ on:
 permissions: {}
 
 jobs:
-  release:
-    runs-on: ubuntu-latest
+  package-and-release:
     permissions:
       contents: write
-    env:
-      CF_API_KEY: ${{ secrets.CF_API_KEY }}
-      WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
-      WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
-
-    steps:
-      - name: Clone project
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Package and distribute
-        env:
-          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
-        uses: McTalian/wow-build-tools@v1-beta
-        with:
-          args: -t ./DeviceLayoutPreset -r ./.release
+    uses: McTalian-WoW-Addons/wow-build-tools/.github/workflows/package-and-distribute.yml@v1-beta
+    with:
+      addon-name: DeviceLayoutPreset
+      avatar-url: https://raw.githubusercontent.com/McTalian-WoW-Addons/DeviceLayoutPreset/refs/heads/main/DLP_logo.png
+    secrets: inherit

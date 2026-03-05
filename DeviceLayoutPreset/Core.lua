@@ -129,7 +129,7 @@ local options = {
 }
 
 local layouts = nil
-local repoUrl = "https://github.com/McTalian/DeviceLayoutPreset"
+local repoUrl = "https://github.com/McTalian-WoW-Addons/DeviceLayoutPreset"
 local currentVersion = "@project-version@"
 local SPEC_DEFAULT = -1
 local DEVICE_DEFAULT = 0

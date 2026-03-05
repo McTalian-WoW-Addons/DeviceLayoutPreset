@@ -17,7 +17,7 @@
 ## Category-ruRU: Интерфейс пользователя
 ## Category-zhCN: 用户界面
 ## Category-zhTW: 使用者介面
-## X-GitHub: https://github.com/Mctalian/DeviceLayoutPreset
+## X-GitHub: https://github.com/McTalian-WoW-Addons/DeviceLayoutPreset
 ## X-Curse-Project-ID: 1066901
 ## X-WoWI-ID: 26777
 ## X-Wago-ID: kGr0Ar6y
