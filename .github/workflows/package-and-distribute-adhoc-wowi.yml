@@ -22,6 +22,6 @@ jobs:
       - name: Package and distribute
         env:
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
-        uses: McTalian/wow-build-tools@v1-beta
+        uses: McTalian-WoW-Addons/wow-build-tools@v1-beta
         with:
           args: -t ./DeviceLayoutPreset -r ./.release
