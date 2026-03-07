@@ -19,6 +19,5 @@ jobs:
     with:
       addon-name: DeviceLayoutPreset
       rockspec-name: devicelayoutpreset-1-1.rockspec
-      lua-version: 5.4.4
-      i18n-enabled: false
+      i18n-enabled: true
     secrets: inherit
