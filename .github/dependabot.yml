@@ -8,5 +8,5 @@ updates:
     groups:
       wow-build-tools:
         patterns:
-          - "McTalian/wow-build-tools*"
-          - "McTalian-WoW-Addons/wow-build-tools*"
+          - McTalian/wow-build-tools*
+          - McTalian-WoW-Addons/wow-build-tools*
