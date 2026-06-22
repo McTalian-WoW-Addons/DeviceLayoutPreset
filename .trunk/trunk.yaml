@@ -10,7 +10,7 @@ plugins:
       ref: v1.10.2
       uri: https://github.com/trunk-io/plugins
     - id: wbt-configs
-      ref: v0.1.1
+      ref: v0.1.2
       uri: https://github.com/McTalian-WoW-Addons/wow-addon-trunk-configs
 actions:
   enabled:
