@@ -1,5 +1,6 @@
 # DeviceLayoutPreset
 
+<!-- markdownlint-disable-next-line MD033 -->
 <img src="DLP_logo.png" alt="Device Layout Preset logo" width="400">
 
 An addon for World of Warcraft to make playing on different devices a little easier.

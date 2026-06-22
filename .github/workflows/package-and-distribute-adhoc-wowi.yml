@@ -15,13 +15,14 @@ jobs:
 
     steps:
       - name: Clone project
-        uses: actions/checkout@v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           fetch-depth: 0
 
       - name: Package and distribute
         env:
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+        # trunk-ignore(pinact/unpinned-action)
         uses: McTalian-WoW-Addons/wow-build-tools@v1
         with:
           args: -t ./DeviceLayoutPreset -r ./.release
