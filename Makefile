@@ -1,7 +1,7 @@
 .PHONY: get_tokens build dev watch test-ci wbt_setup i18n_check i18n_fmt
 
 # Variables
-WBT_REF ?= v1-beta
+WBT_REF ?= v1
 WBT_DIR := ../wow-build-tools
 
 build:
