@@ -1,0 +1,43 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    ":dependencyDashboard",
+    ":semanticCommits"
+  ],
+  "schedule": ["* 0-6 * * 1"],
+  "timezone": "America/Denver",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "description": "Auto-merge minor and patch updates for all packages (actions are already digest-pinned via config:best-practices)",
+      "matchDatasources": ["github-tags"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "automergeType": "pr",
+      "automergeStrategy": "squash",
+      "minimumReleaseAge": "14 days"
+    },
+    {
+      "description": "Group GitHub Actions",
+      "matchDatasources": ["github-tags"],
+      "groupName": "github-actions",
+      "groupSlug": "github-actions"
+    },
+    {
+      "description": "Ignore WBT action pins",
+      "matchDatasources": ["github-tags", "github-digest"],
+      "matchPackageNames": ["McTalian-WoW-Addons/wow-build-tools"],
+      "enabled": false
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "automerge": true,
+    "automergeType": "pr",
+    "automergeStrategy": "squash"
+  },
+  "prConcurrentLimit": 3
+}
