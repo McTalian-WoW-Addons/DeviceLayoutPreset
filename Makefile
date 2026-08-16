@@ -1,4 +1,4 @@
-.PHONY: get_tokens build dev watch test-ci wbt_setup i18n_check i18n_fmt
+.PHONY: get_tokens build dev watch boot_sim test-ci wbt_setup i18n_check i18n_fmt
 
 # Variables
 WBT_REF ?= v1
@@ -12,6 +12,14 @@ dev:
 
 watch:
 	@wow-build-tools watch -t DeviceLayoutPreset -r .release
+
+# Simulate a client login against a built package to catch Lua load errors
+# before a player does. Builds first (skipping packaging) to resolve Libs/
+# externals, since boot-sim needs those on disk to follow real Include
+# chains -- then points boot-sim at the result rather than the source tree.
+boot_sim:
+	@wow-build-tools build -t DeviceLayoutPreset -r .release --skipZip --skipUpload --skipChangelog --no-splash
+	@wow-build-tools boot-sim -t .release/DeviceLayoutPreset --no-splash
 
 wbt_setup:
 	@if [ ! -d "$(WBT_DIR)/scripts/i18n" ]; then \

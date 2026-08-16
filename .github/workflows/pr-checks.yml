@@ -24,4 +24,5 @@ jobs:
       rockspec-name: devicelayoutpreset-1-1.rockspec
       i18n-enabled: true
       trunk-enabled: true
+      boot-sim-enabled: true
     secrets: inherit
