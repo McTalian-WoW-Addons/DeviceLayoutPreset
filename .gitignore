@@ -44,3 +44,6 @@ luac.out
 node_modules
 
 .wbt/
+
+.claude/worktrees/
+.claude/.last-checks.json
